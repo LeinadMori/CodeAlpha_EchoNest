@@ -91,15 +91,63 @@
         </main>
 
         <!-- Additional Section (Right) -->
-        <aside class="right-panel">
-            <div class="section">
+        <div class="dashboard">
+            <div class="now-playing">
+                <img src="/Images/album-placeholder.jpg" alt="Album Artwork" class="album-artwork">
                 
+                <div class="track-info">
+                    <h2>Bohemian Rhapsody</h2>
+                    <p>Queen</p>
+                </div>
+    
+                <div class="playback-controls">
+                    <button><i class="fas fa-step-backward"></i></button>
+                    <button><i class="fas fa-play"></i></button>
+                    <button><i class="fas fa-step-forward"></i></button>
+                </div>
+    
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+    
+                <div class="volume-control">
+                    <i class="fas fa-volume-down"></i>
+                    <input type="range" class="volume-slider" min="0" max="100" value="50">
+                    <i class="fas fa-volume-up"></i>
+                </div>
             </div>
-            <div class="section">
+    
+            <div class="sidebar-recommendations">
+                <h3>Recommended Tracks</h3>
                 
+                <div class="recommended-track">
+                    <img src="/Images/track1-placeholder.jpg" alt="Track 1">
+                    <div class="recommended-track-info">
+                        <h3>Stairway to Heaven</h3>
+                        <p>Led Zeppelin</p>
+                    </div>
+                    <i class="fas fa-plus"></i>
+                </div>
+    
+                <div class="recommended-track">
+                    <img src="/Images/track2-placeholder.jpg" alt="Track 2">
+                    <div class="recommended-track-info">
+                        <h3>Hotel California</h3>
+                        <p>Eagles</p>
+                    </div>
+                    <i class="fas fa-plus"></i>
+                </div>
+    
+                <div class="recommended-track">
+                    <img src="/Images/track3-placeholder.jpg" alt="Track 3">
+                    <div class="recommended-track-info">
+                        <h3>Imagine</h3>
+                        <p>John Lennon</p>
+                    </div>
+                    <i class="fas fa-plus"></i>
+                </div>
             </div>
-        </aside>
-
+        </div>
     </div>
 
     <script src="/js/index.js"></script>
