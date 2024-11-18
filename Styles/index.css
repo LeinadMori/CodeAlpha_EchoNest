@@ -9,7 +9,7 @@ body {
     font-family: Arial, sans-serif;
     display: flex;
     min-height: 100vh;
-    background-color: #2e2e2e;
+    background-color: #121212;
     color: white;
     text-decoration: none;
 }
@@ -53,6 +53,75 @@ body {
 
 /* Artist, Album, Radio Show, Genre buttons */
 /* Make the music buttons display horizontally */
+
+
+
+/* Left- Sidebar */
+.sidebar-section {
+    margin-bottom: 20px;
+}
+
+.sidebar-section h3 {
+    font-size: .8rem;
+    color: #888;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.sidebar-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    margin-bottom: 10px;
+}
+
+.sidebar-menu a {
+    text-decoration: none;
+    color: #b3b3b3;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s ease;
+}
+
+.sidebar-menu a:hover {
+    color: white;
+}
+
+.profile-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+    font-size: 16px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    padding: 10px;
+}
+
+.dropdown-menu a {
+    color: #333;
+    padding: 5px;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f0f0f0;
+}
 
 
 
