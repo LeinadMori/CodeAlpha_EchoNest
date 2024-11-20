@@ -32,35 +32,41 @@
                 </ul>
             </div>
     
-            <div class="sidebar-section">
+            <div class="sidebar-section" id="library-section">
                 <h3>Library</h3>
-                <ul class="sidebar-menu">
-                    <li><a href="#"><i class="fas fa-heart"></i> Favorites</a></li>
-                    <li><a href="#"><i class="fas fa-history"></i> Recently Played</a></li>
+                <ul class="sidebar-menu" id="favorites-list">
+                    <li><a href="#"><i class="fas fa-heart"></i> Favorite Song 1</a></li>
+                    <li><a href="#"><i class="fas fa-heart"></i> Favorite Song 2</a></li>
+                </ul>
+                <ul class="sidebar-menu" id="recently-played-list">
+                    <li><a href="#"><i class="fas fa-history"></i> Recently Played 1</a></li>
+                    <li><a href="#"><i class="fas fa-history"></i> Recently Played 2</a></li>
                 </ul>
             </div>
-    
-            <div class="sidebar-section">
+            
+            <div class="sidebar-section" id="playlists-section">
                 <h3>Playlists</h3>
-                <ul class="sidebar-menu">
-                    <li><a href="#"><i class="fas fa-plus"></i> Create Playlist</a></li>
+                <ul class="sidebar-menu" id="playlists-list">
                     <li><a href="#"><i class="fas fa-guitar"></i> Rock</a></li>
                     <li><a href="#"><i class="fas fa-dumbbell"></i> Exercise</a></li>
-                    <li><a href="#"><i class="fas fa-guitar"></i> Blues</a></li>
+                    <li><a href="#"><i class="fas fa-music"></i> Blues</a></li>
+                    <li><a href="#"><i class="fas fa-plus"></i> Create Playlist</a></li>
                 </ul>
             </div>
+            
     
             <div class="profile">
                 <button class="profile-btn">
                     <i class="fas fa-user"></i> Profile
                 </button>
                 <div class="dropdown-menu">
-                    <a href="#">View Profile</a>
-                    <a href="#">Edit Profile</a>
-                    <a href="#">Change Password</a>
-                    <a href="#">Account Settings</a>
-                    <a href="#">Log Out</a>
-                </div>
+                    <a href="#" data-page="view-profile">View Profile</a>
+                    <a href="#" data-page="edit-profile">Edit Profile</a>
+                    <a href="#" data-page="change-password">Change Password</a>
+                    <a href="#" data-page="account-settings">Account Settings</a>
+                    <a href="#" data-page="log-out">Log Out</a>
+                </div>                
+                
             </div>
         </aside>
 
@@ -70,85 +76,84 @@
                 <input type="text" placeholder="Search for songs, albums, or artists" id="search-bar">
                 <i class="fas fa-search"></i>
             </div>
+            
+            <div id="search-results" aria-live="polite" style="display: none;">
+                <ul id="results-list">
+                    <li class="search-item">Song: Rolling in the Deep - Adele</li>
+                    <li class="search-item">Album: 21 - Adele</li>
+                    <li class="search-item">Artist: Ed Sheeran</li>
+                    <li class="search-item">Song: Shape of You - Ed Sheeran</li>
+                    <li class="search-item">Album: Divide - Ed Sheeran</li>
+                </ul>
+            </div>
+            
+            
+            
 
+        <div class="main-content">
             <div class="player-content">
                 <div class="album-art">
                     <img src="/Images/album.jpeg" alt="Album Art">
                 </div>
                 <div class="song-info">
-                    <h3>Song Title</h3>
-                    <p>Artist Name</p>
-                </div>
-
-                <div class="controls">
-                    <button id="prev" class="control-btn"><i class="fas fa-backward"></i></button>
-                    <button id="play-pause" class="control-btn"><i class="fas fa-play"></i></button>
-                    <button id="next" class="control-btn"><i class="fas fa-forward"></i></button>
-                    <input type="range" id="progress-bar" value="0" max="100">
-                    <input type="range" id="volume-control" value="50" max="100">
-                </div>
-            </div>
-        </main>
-
-        <!-- Additional Section (Right) -->
-        <div class="dashboard">
-            <div class="now-playing">
-                <img src="/Images/album-placeholder.jpg" alt="Album Artwork" class="album-artwork">
-                
-                <div class="track-info">
                     <h2>Bohemian Rhapsody</h2>
                     <p>Queen</p>
                 </div>
-    
-                <div class="playback-controls">
-                    <button><i class="fas fa-step-backward"></i></button>
-                    <button><i class="fas fa-play"></i></button>
-                    <button><i class="fas fa-step-forward"></i></button>
-                </div>
-    
-                <div class="progress-bar">
-                    <div class="progress"></div>
-                </div>
-    
-                <div class="volume-control">
-                    <i class="fas fa-volume-down"></i>
-                    <input type="range" class="volume-slider" min="0" max="100" value="50">
-                    <i class="fas fa-volume-up"></i>
+
+                <div class="controls">
+                    <div class="playback-controls">
+                        <button class="control-btn repeat-btn" title="Repeat"><i class="fas fa-redo"></i></button>
+                        <button class="control-btn"><i class="fas fa-step-backward"></i></button>
+                        <button class="control-btn play-pause"><i class="fas fa-play-circle"></i></button>
+                        <button class="control-btn"><i class="fas fa-step-forward"></i></button>
+                        <button class="control-btn shuffle-btn" title="Shuffle"><i class="fas fa-random"></i></button>
+                    </div>
+                    <div class="progress-container">
+                        <span>2:30</span>
+                        <div class="progress-bar">
+                            <div class="progress"></div>
+                        </div>
+                        <span>4:15</span>
+                    </div>
+                    <div class="volume-control">
+                        <i class="fas fa-volume-down"></i>
+                        <input type="range" class="volume-slider" min="0" max="100" value="50">
+                        <i class="fas fa-volume-up"></i>
+                    </div>
                 </div>
             </div>
-    
-            <div class="sidebar-recommendations">
+
+            <div class="recommendations">
                 <h3>Recommended Tracks</h3>
-                
                 <div class="recommended-track">
-                    <img src="/Images/track1-placeholder.jpg" alt="Track 1">
+                    <img src="/Images/album.jpeg" alt="Track 1">
                     <div class="recommended-track-info">
-                        <h3>Stairway to Heaven</h3>
+                        <h4>Stairway to Heaven</h4>
                         <p>Led Zeppelin</p>
                     </div>
                     <i class="fas fa-plus"></i>
                 </div>
-    
+
                 <div class="recommended-track">
-                    <img src="/Images/track2-placeholder.jpg" alt="Track 2">
+                    <img src="/Images/app-logo.jpeg" alt="Track 2">
                     <div class="recommended-track-info">
-                        <h3>Hotel California</h3>
+                        <h4>Hotel California</h4>
                         <p>Eagles</p>
                     </div>
                     <i class="fas fa-plus"></i>
                 </div>
-    
+
                 <div class="recommended-track">
-                    <img src="/Images/track3-placeholder.jpg" alt="Track 3">
+                    <img src="/Images/album.jpeg" alt="Track 3">
                     <div class="recommended-track-info">
-                        <h3>Imagine</h3>
+                        <h4>Imagine</h4>
                         <p>John Lennon</p>
                     </div>
                     <i class="fas fa-plus"></i>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 
     <script src="/js/index.js"></script>
 </body>
